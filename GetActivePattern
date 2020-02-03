@@ -1,0 +1,8 @@
+Function GetActivePattern() As String
+  Dim db As DAO.Database
+  Dim rs As DAO.Recordset
+  Set db = CurrentDb
+  Set rs = db.OpenRecordset("Active-Pattern")
+  'Debug.Print rs!Pattern
+  GetActivePattern = rs!Pattern
+End Function
